@@ -3,7 +3,7 @@ package ba.unsa.etf.rpr.tutorijal03;
 import java.util.Set;
 import java.util.TreeSet;
 
-//jos uvijek neimplementovana klasa Imenik
+/*jos uvijek neimplementovana klasa Imenik*/
 public class Imenik {
 
     public void dodaj(String ime, TelefonskiBroj broj) {
