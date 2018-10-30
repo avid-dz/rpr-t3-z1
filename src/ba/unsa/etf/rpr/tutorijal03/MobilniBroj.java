@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
+//implementovana relativno jednostavna klasa MobilniBroj
 public class MobilniBroj extends TelefonskiBroj {
 
     private int mobilnaMreza;
