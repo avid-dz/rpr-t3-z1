@@ -11,4 +11,7 @@ public class Imenik {
     public String dajIme(TelefonskiBroj broj) {
         return "";
     }
+    public String naSlovo(char s) {
+        return "";
+    }
 }
