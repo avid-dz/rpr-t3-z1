@@ -13,6 +13,8 @@ public class FiksniBroj extends TelefonskiBroj {
     private String pozivni;
     private String broj;
 
+    /*inicijalizacija atributa mape, koja sluzi za cuvanje parova gradova i pozivnih brojeva umjesto
+    koristenja switch-case ili if-else if-else u metodama ili konstruktoru*/
     {
         mapa = new TreeMap<>();
         mapa.put(Grad.TRAVNIK, "030");
