@@ -20,4 +20,7 @@ public class Imenik {
     public Set<String> izGrada(FiksniBroj.Grad g) {
         return new TreeSet<>();
     }
+    public Set<TelefonskiBroj> izGradaBrojevi(FiksniBroj.Grad g) {
+        return new TreeSet<>();
+    }
 }
