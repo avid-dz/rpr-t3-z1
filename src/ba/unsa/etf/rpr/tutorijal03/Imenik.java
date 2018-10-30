@@ -6,6 +6,9 @@ public class Imenik {
 
     }
     public String dajBroj(String ime) {
-
+        return "";
+    }
+    public String dajIme(TelefonskiBroj broj) {
+        return "";
     }
 }
