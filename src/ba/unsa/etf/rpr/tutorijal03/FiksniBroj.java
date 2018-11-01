@@ -2,6 +2,7 @@ package ba.unsa.etf.rpr.tutorijal03;
 
 import java.util.Map;
 import java.util.TreeMap;
+import static ba.unsa.etf.rpr.tutorijal03.FiksniBroj.Grad.*;
 
 public class FiksniBroj extends TelefonskiBroj {
 
