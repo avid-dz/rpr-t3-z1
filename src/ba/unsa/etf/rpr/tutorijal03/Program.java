@@ -27,6 +27,7 @@ public class Program {
         String fiksniBezPozivnog;
         String mobilniBezPozivnog;
         String medunarodniBezPozivnog;
+        String slovo;
         FiksniBroj fiksni = null;
         MedunarodniBroj medunarodni = null;
         MobilniBroj mobilni = null;
@@ -182,6 +183,19 @@ public class Program {
                         System.out.println();
                         break;
                     }
+                    System.out.println();
+                    break;
+                case 8:
+                    System.out.print("Unesite prvo slovo imena: ");
+                    slovo = scan.next();
+                    System.out.println(imenik.naSlovo(slovo.trim().charAt(0)));
+                    System.out.println();
+                    break;
+                case 9:
+
+                    break;
+                case 10:
+
                     System.out.println();
                     break;
             }
