@@ -61,8 +61,8 @@ public class Imenik {
     }
     public Set<TelefonskiBroj> izGradaBrojevi(FiksniBroj.Grad g) {
         TreeSet<TelefonskiBroj> skup = new TreeSet<>();
-        for (TelefonskiBroj broj : mapaOsoba.values()) {
-            if (broj instanceof FiksniBroj) {
+        for (TelefonskiBroj broj : mapaOsoba.values()) { //iteriranje kroz vrijednosti (brojeve)
+            if (broj instanceof FiksniBroj) {            //jer nam ovdje kljucevi (imena) ni ne trebaju
                 if (((FiksniBroj) broj).getGrad() == g) skup.add(broj);
             }
         }
