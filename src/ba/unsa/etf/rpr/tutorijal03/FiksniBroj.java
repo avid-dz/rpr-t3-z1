@@ -13,6 +13,7 @@ public class FiksniBroj extends TelefonskiBroj {
     private Map<Grad, String> mapa;
     private String pozivni;
     private String broj;
+    private Grad grad;
 
     /*inicijalizacija atributa mape, koja sluzi za cuvanje parova gradova i pozivnih brojeva umjesto
     koristenja switch-case ili if-else if-else u metodama ili konstruktoru*/
@@ -32,8 +33,13 @@ public class FiksniBroj extends TelefonskiBroj {
     }
 
     public FiksniBroj(Grad grad, String broj) {
+        this.grad = grad;
         pozivni = mapa.get(grad);
         this.broj = broj;
+    }
+
+    public Grad getGrad() {
+        return grad;
     }
 
     @Override
