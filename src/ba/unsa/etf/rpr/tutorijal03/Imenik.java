@@ -50,7 +50,14 @@ public class Imenik {
         return ispis;
     }
     public Set<String> izGrada(FiksniBroj.Grad g) {
-        return new TreeSet<>();
+        TreeSet<String> skup = new TreeSet<>();
+        for (Map.Entry<String, TelefonskiBroj> par : mapaOsoba.entrySet()) {
+            if (par.getValue() instanceof FiksniBroj) {
+                FiksniBroj fiksni = (FiksniBroj) par.getValue();
+                if (fiksni.getGrad() == g) skup.add(par.getKey());
+            }
+        }
+        return skup;
     }
     public Set<TelefonskiBroj> izGradaBrojevi(FiksniBroj.Grad g) {
         return new TreeSet<>();
