@@ -60,6 +60,12 @@ public class Imenik {
         return skup;
     }
     public Set<TelefonskiBroj> izGradaBrojevi(FiksniBroj.Grad g) {
-        return new TreeSet<>();
+        TreeSet<TelefonskiBroj> skup = new TreeSet<>();
+        for (TelefonskiBroj broj : mapaOsoba.values()) {
+            if (broj instanceof FiksniBroj) {
+                if (((FiksniBroj) broj).getGrad() == g) skup.add(broj);
+            }
+        }
+        return skup;
     }
 }
