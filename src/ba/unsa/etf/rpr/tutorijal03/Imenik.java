@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 import static ba.unsa.etf.rpr.tutorijal03.FiksniBroj.Grad.*;
@@ -25,7 +26,20 @@ public class Imenik {
         return "";
     }
     public String naSlovo(char s) {
-        return "";
+        int brojOsobaNaSlovo = 0;
+        String ispis = "";
+        for (Map.Entry<String, TelefonskiBroj> par : mapaOsoba.entrySet()) {
+            if (par.getKey().charAt(0) == s) {
+                brojOsobaNaSlovo++;
+                ispis += brojOsobaNaSlovo;
+                ispis += ". ";
+                ispis += par.getKey();
+                ispis += " - ";
+                ispis += par.getValue().ispisi();
+                ispis += "\n";
+            }
+        }
+        return ispis;
     }
     public Set<String> izGrada(FiksniBroj.Grad g) {
         return new TreeSet<>();
