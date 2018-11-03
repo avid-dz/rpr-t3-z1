@@ -22,8 +22,16 @@ public class Imenik {
         return mapaOsoba.get(ime).ispisi();
     }
     public String dajIme(TelefonskiBroj broj) {
-        if(!mapaOsoba.containsValue(broj)) throw new IllegalArgumentException("Taj broj nije ni upisan u imenik!");
-        return "";
+        boolean pronadjenBroj = false;
+        for (Map.Entry<String, TelefonskiBroj> par : mapaOsoba.entrySet()) {
+            if (par.getValue().compareTo(broj) == 0) pronadjenBroj = true;
+        }
+        if (!pronadjenBroj) throw new IllegalArgumentException("Taj broj nije ni upisan u imenik!");
+        String trazeno = "";
+        for (Map.Entry<String, TelefonskiBroj> par : mapaOsoba.entrySet()) {
+            if (par.getValue().compareTo(broj) == 0) trazeno = par.getKey();
+        }
+        return trazeno;
     }
     public String naSlovo(char s) {
         int brojOsobaNaSlovo = 0;
