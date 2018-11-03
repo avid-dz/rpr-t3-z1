@@ -1,8 +1,7 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
-import java.util.Map;
-import java.util.Scanner;
-import java.util.TreeMap;
+import java.util.*;
+
 import static ba.unsa.etf.rpr.tutorijal03.FiksniBroj.Grad.*;
 
 public class Program {
@@ -192,7 +191,13 @@ public class Program {
                     System.out.println();
                     break;
                 case 9:
-
+                    System.out.print("Unesite ime grada (za Siroki Brijeg kucajte SirokiBrijeg): ");
+                    imeGrada = scan.next();
+                    Set<String> skupIzGrada = imenik.izGrada(mapa.get(imeGrada));
+                    for (String imeOsobe : skupIzGrada) {
+                        System.out.println(imeOsobe);
+                    }
+                    System.out.println();
                     break;
                 case 10:
 
