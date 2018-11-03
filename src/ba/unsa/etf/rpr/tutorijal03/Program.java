@@ -200,7 +200,12 @@ public class Program {
                     System.out.println();
                     break;
                 case 10:
-
+                    System.out.print("Unesite ime grada (za Siroki Brijeg kucajte SirokiBrijeg): ");
+                    imeGrada = scan.next();
+                    Set<TelefonskiBroj> skupBrojevaIzGrada = imenik.izGradaBrojevi(mapa.get(imeGrada));
+                    for (TelefonskiBroj brojOsobe : skupBrojevaIzGrada) {
+                        System.out.println(brojOsobe.ispisi());
+                    }
                     System.out.println();
                     break;
             }
