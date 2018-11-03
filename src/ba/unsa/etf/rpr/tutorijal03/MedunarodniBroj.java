@@ -1,6 +1,5 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
-//implementovana relativno kratka i jednostavna klasa MedunarodniBroj
 public class MedunarodniBroj extends TelefonskiBroj {
 
     private String drzava;
@@ -18,6 +17,6 @@ public class MedunarodniBroj extends TelefonskiBroj {
 
     @Override
     public int hashCode() {
-        return drzava.hashCode() + broj.hashCode();
+        return drzava.hashCode() + broj.hashCode(); //radi smjestanja u HashMap, iako nece biti kljuc
     }
 }
