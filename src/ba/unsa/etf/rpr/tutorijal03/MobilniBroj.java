@@ -1,6 +1,5 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
-//implementovana relativno jednostavna klasa MobilniBroj
 public class MobilniBroj extends TelefonskiBroj {
 
     private int mobilnaMreza;
@@ -19,5 +18,5 @@ public class MobilniBroj extends TelefonskiBroj {
     @Override
     public int hashCode() {
         return mobilnaMreza + broj.hashCode();
-    }
+    } //radi smjestanja u HashMap, iako nece biti kljuc
 }
