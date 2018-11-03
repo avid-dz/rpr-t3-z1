@@ -17,9 +17,11 @@ public class Imenik {
         mapaOsoba.put(ime, broj);
     }
     public String dajBroj(String ime) {
+        if(!mapaOsoba.containsKey(ime)) throw new IllegalArgumentException("To ime nije ni upisano u imenik!");
         return mapaOsoba.get(ime).ispisi();
     }
     public String dajIme(TelefonskiBroj broj) {
+        if(!mapaOsoba.containsValue(broj)) throw new IllegalArgumentException("Taj broj nije ni upisan u imenik!");
         return "";
     }
     public String naSlovo(char s) {
