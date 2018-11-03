@@ -7,9 +7,9 @@ import static ba.unsa.etf.rpr.tutorijal03.FiksniBroj.Grad.*;
 public class Program {
 
     public static void main(String[] args) {
-        Map<String, FiksniBroj.Grad> mapa = new TreeMap<>();
-        mapa.put("Travnik", FiksniBroj.Grad.TRAVNIK);
-        mapa.put("Orasje", FiksniBroj.Grad.ORASJE);
+        Map<String, FiksniBroj.Grad> mapa = new TreeMap<>(); //ova mapa se koristi za lakse rukovanje gradovima
+        mapa.put("Travnik", FiksniBroj.Grad.TRAVNIK);        //jer korisnik unosi ime grada kao String, a nama treba
+        mapa.put("Orasje", FiksniBroj.Grad.ORASJE);          //tip Grad
         mapa.put("Zenica", FiksniBroj.Grad.ZENICA);
         mapa.put("Sarajevo", FiksniBroj.Grad.SARAJEVO);
         mapa.put("Livno", FiksniBroj.Grad.LIVNO);
