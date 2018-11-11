@@ -36,6 +36,7 @@ public class Program {
         int mreza;
         String drzava;
         String unos;
+        String upit = "Unesite ime grada (za Siroki Brijeg kucajte SirokiBrijeg): ";
         while (true) {
             System.out.println("Izaberite opciju (0 za kraj): ");
             System.out.println("1 - Kreiranje praznog imenika");
@@ -57,7 +58,7 @@ public class Program {
                     System.out.println();
                     break;
                 case 2:
-                    System.out.print("Unesite ime grada (za Siroki Brijeg kucajte SirokiBrijeg): ");
+                    System.out.print(upit);
                     imeGrada = scan.next();
                     System.out.print("Unesite fiksni broj bez pozivnog: ");
                     fiksniBezPozivnog = scan.next();
@@ -96,7 +97,7 @@ public class Program {
                     System.out.println("(Unesite FIX, MED, ili MOB u zavisnosti od toga.)");
                     unos = scan.next();
                     if (unos.trim().equals("FIX")) {
-                        System.out.print("Unesite ime grada (za Siroki Brijeg kucajte SirokiBrijeg): ");
+                        System.out.print(upit);
                         imeGrada = scan.next();
                         System.out.print("Unesite fiksni broj bez pozivnog: ");
                         fiksniBezPozivnog = scan.next();
@@ -145,7 +146,7 @@ public class Program {
                     System.out.println("(Unesite FIX, MED, ili MOB u zavisnosti od toga.)");
                     unos = scan.next();
                     if (unos.trim().equals("FIX")) {
-                        System.out.print("Unesite ime grada (za Siroki Brijeg kucajte SirokiBrijeg): ");
+                        System.out.print(upit);
                         imeGrada = scan.next();
                         System.out.print("Unesite fiksni broj bez pozivnog: ");
                         fiksniBezPozivnog = scan.next();
@@ -191,7 +192,7 @@ public class Program {
                     System.out.println();
                     break;
                 case 9:
-                    System.out.print("Unesite ime grada (za Siroki Brijeg kucajte SirokiBrijeg): ");
+                    System.out.print(upit);
                     imeGrada = scan.next();
                     Set<String> skupIzGrada = imenik.izGrada(mapa.get(imeGrada));
                     for (String imeOsobe : skupIzGrada) {
@@ -200,7 +201,7 @@ public class Program {
                     System.out.println();
                     break;
                 case 10:
-                    System.out.print("Unesite ime grada (za Siroki Brijeg kucajte SirokiBrijeg): ");
+                    System.out.print(upit);
                     imeGrada = scan.next();
                     Set<TelefonskiBroj> skupBrojevaIzGrada = imenik.izGradaBrojevi(mapa.get(imeGrada));
                     for (TelefonskiBroj brojOsobe : skupBrojevaIzGrada) {

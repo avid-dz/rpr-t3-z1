@@ -8,7 +8,7 @@ import static ba.unsa.etf.rpr.tutorijal03.FiksniBroj.Grad.*;
 
 public class Imenik {
 
-    private HashMap<String, TelefonskiBroj> mapaOsoba;
+    private Map<String, TelefonskiBroj> mapaOsoba;
 
     public Imenik() {
         mapaOsoba = new HashMap<>();
@@ -62,8 +62,8 @@ public class Imenik {
     public Set<TelefonskiBroj> izGradaBrojevi(FiksniBroj.Grad g) {
         TreeSet<TelefonskiBroj> skup = new TreeSet<>();
         for (TelefonskiBroj broj : mapaOsoba.values()) { //iteriranje kroz vrijednosti (brojeve)
-            if (broj instanceof FiksniBroj) {            //jer nam ovdje kljucevi (imena) ni ne trebaju
-                if (((FiksniBroj) broj).getGrad() == g) skup.add(broj);
+            if ((broj instanceof FiksniBroj) && (((FiksniBroj) broj).getGrad() == g)) { //jer nam ovdje kljucevi (imena)
+                skup.add(broj);                                                         // ni ne trebaju
             }
         }
         return skup;
